@@ -5,8 +5,10 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "compile": "tsc",
-    "start": "npm run compile && node ./dist/index.js"
+    "start": "npm run build && node ./dist/index.js",
+    "build": "npm run build:clean && npm run build:tsc",
+    "build:tsc": "tsc -p tsconfig.prod.json",
+    "build:clean": "rm -r dist; exit 0"
   },
   "dependencies": {
     "@apollo/server": "^4.3.0",
