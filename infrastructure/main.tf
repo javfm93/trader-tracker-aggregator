@@ -1,6 +1,3 @@
-// here we need to receive the state of the pieces that are common, vpc, subnets, elb, cluster_name
-// also, we can do the same but with ssm parameters, better idea!!
-
 data "terraform_remote_state" "core" {
   backend = "s3"
 
