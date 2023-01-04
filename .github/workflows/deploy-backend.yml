@@ -61,5 +61,5 @@ jobs:
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
           service: ${{ format('{0}-ecs-service', secrets.APP_NAME) }}
-          cluster: ${{ format('{0}-ecs-cluster', secrets.APP_NAME) }}
+          cluster: trader-tracker-ecs-cluster
           wait-for-service-stability: true
