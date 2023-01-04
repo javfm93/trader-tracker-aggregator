@@ -1,6 +1,9 @@
-FROM node:16.18
+FROM node:18-slim
 
 WORKDIR /code
+
+COPY package*.json ./
+RUN yarn
 
 COPY . .
 RUN yarn install

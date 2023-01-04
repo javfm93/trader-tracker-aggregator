@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "type": "module",
   "scripts": {
-    "start": "npm run build && node ./dist/index.js",
+    "start": "NODE_ENV=production node ./dist/src/index.js",
     "build": "npm run build:clean && npm run build:tsc",
     "build:tsc": "tsc -p tsconfig.prod.json",
     "build:clean": "rm -r dist; exit 0"
