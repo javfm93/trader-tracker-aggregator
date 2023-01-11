@@ -11,9 +11,9 @@ import axios from "axios";
 interface MyContext {
     token?: String;
 }
-
+// ECS-trader-tracker-aggregator-task-execution-role check why i dont get the execute role perms
 const run = async () => {
-    axios.get('http://internal-trader-tracker-private-alb-1481817480.eu-west-1.elb.amazonaws.com').then(resp => {
+    axios.get('http://internal-trader-tracker-private-alb-1481817480.eu-west-1.elb.amazonaws.com/trader-tracker-backend/').then(resp => {
 
         console.log(resp.data);
     }).catch(console.error);
