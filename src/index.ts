@@ -1,4 +1,3 @@
-// npm install @apollo/server express graphql cors body-parser
 import { ApolloServer } from '@apollo/server';
 import { expressMiddleware } from '@apollo/server/express4';
 import { ApolloServerPluginDrainHttpServer } from '@apollo/server/plugin/drainHttpServer';
@@ -7,12 +6,17 @@ import http from 'http';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import { typeDefs, resolvers } from './schema';
+import axios from "axios";
 
 interface MyContext {
     token?: String;
 }
 
 const run = async () => {
+    axios.get('http://internal-trader-tracker-private-alb-1481817480.eu-west-1.elb.amazonaws.com').then(resp => {
+
+        console.log(resp.data);
+    }).catch(console.error);
     // Required logic for integrating with Express
     const app = express();
     // Our httpServer handles incoming requests to our Express app.
