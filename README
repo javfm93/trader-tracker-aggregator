@@ -1,0 +1,5 @@
+todo: what happens when I use the same port? Can i put range of ports in the elb, use the same port for all the apps?
+todo: check why i cant pull the image, permissions?? maybe it is hardcode to the other repo (probably happen because the other apply destroy this)
+
+todo: use aggregator as the front of the app connecting with trader-tracker
+todo: implement a healthcheck of the aggregator using express middleware
