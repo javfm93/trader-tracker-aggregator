@@ -1,7 +1,7 @@
-output "elb" {
-  value = data.terraform_remote_state.core.outputs.elb_dns_name
+output "public_alb" {
+  value = data.terraform_remote_state.core.outputs.public_alb.dns
 }
 
-output "ecr-repository" {
-  value = module.create-new-backend.ecr-repository
+output "ecr_repository" {
+  value = module.create-new-public-backend.ecr-repository
 }
