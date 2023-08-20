@@ -1,3 +1,7 @@
+This is an infrastructure project.
+
+A graphql aggregator to use as BFF of the multiple apps, leveraging the infra to deploy from the main repo.
+
 todo: what happens when I use the same port? Can i put range of ports in the elb, use the same port for all the apps?
 todo: check why i cant pull the image, permissions?? maybe it is hardcode to the other repo (probably happen because the other apply destroy this)
 
